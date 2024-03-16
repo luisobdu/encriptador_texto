@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Encriptador</title>
-</head>
-<body>
-    <script src="app.js"></script>
-</body>
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador LuisObdu Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="estilo.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <main>
+            <div class="logo">
+                <img src="imagenes-encriptador/Logo-1.png" alt="logo a">
+            </div>
+
+            <div class="texto">
+                <textarea cols="42" rows="1" id="valorUsuario" class="mensaje" placeholder="Ingrese el texto aqui"></textarea>
+                <section class="advertencia">
+                    <img src="imagenes-encriptador/bi_exclamation-circle-fill-1.png" class="exclamacion">
+                    <p class="texto-advertencia">Solo letras minúsculas y sin acento</p>
+                </section>
+                <button id="boton1" class="boton" onclick="finalEncriptar();">Encriptar</button>
+                <button id="boton2" class="boton" onclick="finalDesencriptar();">Desencriptar</button> 
+            </div>
+                        
+            <div class="respuesta" id="vacio">
+                <p><img src="imagenes-encriptador/Muñeco.png" class="muneco" alt="muneco con diamante"></p>
+                <p class="anuncio-uno">Ningún mensaje fue encontrado</p>
+                <p class="anuncio-dos">Ingrese el texto que desea encriptar o desencriptar.</p>
+            </div>
+
+            <div class="respuesta" id="solucion" style="display: none;">
+                <textarea cols="5" rows="1" class="final" readonly></textarea>
+                <button id="boton2" class="boton-copiar" type="button">Copiar</button>
+            </div>
+
+        </main>
+
+        <footer>
+            <p class="copyright">&copy Copyright LuisObdu - Alura 2024</p>
+        </footer>
+
+        <script src="codigo-encriptador.js" defer></script>
+    </body>
+
 </html>
